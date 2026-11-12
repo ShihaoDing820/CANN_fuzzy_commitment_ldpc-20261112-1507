@@ -1,0 +1,20 @@
+# CMake and compiled outputs
+/build/
+/cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.o
+*.so
+
+# CANN CPU twin-debug artifacts
+/cceprint/
+/npuchk/
+/stub_reg.log
+*.log
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
