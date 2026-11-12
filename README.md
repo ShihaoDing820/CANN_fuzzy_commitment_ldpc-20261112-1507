@@ -93,7 +93,7 @@ cmake --fresh \
   -DCMAKE_ASC_ARCHITECTURES=dav-2201
 
 cmake --build build --parallel 2
-./build/fuzzy_ldpc_test
+./build/fuzzy_commitment_ldpc_test
 ```
 
 ## 预期输出
@@ -155,9 +155,9 @@ Normalized Min-Sum 使用：
 ```text
 .
 ├── CMakeLists.txt       # CMake/Ascend C 构建配置
-├── fuzzy_ldpc.asc       # Ascend C Kernel、Host 参考译码器和测试入口
-├── host_crypto.cpp      # Host SHA-256 与常数时间比较
-├── host_crypto.h
+├── fuzzy_commitment_ldpc.asc    # Fuzzy Commitment 专用 Ascend C Kernel、参考译码器和测试入口
+├── fuzzy_commitment_crypto.cpp  # Fuzzy Commitment 专用 Host SHA-256 与常数时间比较
+├── fuzzy_commitment_crypto.h
 ├── run-tests.sh         # 一键构建和测试脚本
 └── README.md
 ```
@@ -166,7 +166,7 @@ Normalized Min-Sum 使用：
 
 ## 修改 LDPC 参数
 
-当前 QC-LDPC 参数位于 `fuzzy_ldpc.asc` 顶部：
+当前 QC-LDPC 参数位于 `fuzzy_commitment_ldpc.asc` 顶部：
 
 ```cpp
 constexpr int32_t kLiftSize = 16;

@@ -32,4 +32,4 @@ cmake \
 
 cmake --build "${build_dir}" --parallel 2
 
-"${build_dir}/fuzzy_ldpc_test"
+"${build_dir}/fuzzy_commitment_ldpc_test"
